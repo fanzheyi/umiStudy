@@ -1,0 +1,129 @@
+/* body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+
+.fmexample {
+  padding: 2rem;
+  min-height: 100%;
+}
+
+.fmexample>* {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fmgrid>ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-auto-rows: 8rem;
+  grid-gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.fmlist {
+  grid-gap: 1rem;
+  margin: 2rem 0;
+}
+
+.fmgrid,
+.fmlist {
+  border-radius: 5px;
+  background-color: #ececec;
+  margin-top: 2.5rem;
+  max-width: 900px;
+}
+
+.fmlist>ul,
+.fmgrid>ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem;
+}
+
+.fmlist .fmitem {
+  margin-bottom: 1rem;
+}
+
+.fmlist .fmitem:last-of-type {
+  margin-bottom: 0;
+}
+
+.fmitem {
+  overflow: hidden;
+  display: block;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.fmitem h3 {
+  font-size: 1.1rem;
+}
+
+.fmitem>div {
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fmitem h3 {
+  margin-bottom: 0;
+}
+
+.fmitem p {
+  font-style: italic;
+  margin-top: 0;
+}
+
+.fmremove {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 2.2rem;
+  color: #ff4057;
+  position: relative;
+  left: 0.5rem;
+  width: 1.5rem;
+}
+
+.fmshowall {
+  padding: 0.5rem 1rem;
+  background-color: #ff4057;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 3px;
+}
+
+.fmflexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fmflexcontainer>label {
+  min-width: 4.5rem;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.fmexample fieldset {
+  border: 0;
+  padding: 1rem;
+}
+
+.fmexample label {
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.fmexample input {
+  position: relative;
+  margin-right: 0.5rem;
+}
