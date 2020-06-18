@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { Flipped, spring } from "react-flip-toolkit";
-
+import style from "./index.css";
 const onElementAppear = (el, index) =>
   spring({
     onUpdate: val => {
@@ -47,7 +47,7 @@ class Card extends PureComponent {
         stagger={stagger}
         shouldInvert={this.shouldFlip}
       >
-        <li className="fm-item">
+        <li className={style.fmitem}>
           <Flipped inverseFlipId={flipId}>
             <div>
               <Flipped
@@ -68,7 +68,7 @@ class Card extends PureComponent {
                 delayUntil={flipId}
               >
                 <button
-                  className="fm-remove"
+                  className={style.fmremove}
                   onClick={() => addToFilteredIds(id)}
                 >
                   &times;

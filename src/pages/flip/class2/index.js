@@ -7,15 +7,18 @@ import style from "./index.css";
 // import "sanitize.css";
 export default class ListExample extends Component {
     state = {
-        type: "list",
-        sort: "asc",
+        type: "list",//布局方式
+        sort: "asc",//控制排序
         filteredIds: [],
         stagger: "forward",
         spring: "noWobble"
     };
 
     addToFilteredIds = id => {
+        //删除  加入过滤id数组
         this.setState(prevState => {
+            console.log('prevState.filteredIds.concat(id): ', prevState.filteredIds.concat(id));
+
             return {
                 filteredIds: prevState.filteredIds.concat(id)
             };
@@ -72,7 +75,7 @@ export default class ListExample extends Component {
                         </fieldset>
 
                         <fieldset>
-                            <legend>Type</legend>
+                            <legend>Type 布局方式</legend>
                             <label
                                 onClick={() => {
                                     this.setState({
@@ -99,12 +102,13 @@ export default class ListExample extends Component {
                                     name="type"
                                     checked={this.state.type === "list"}
                                 />
-                list
-              </label>
+                            list
+                        </label>
                         </fieldset>
 
                         <fieldset>
-                            <legend>Stagger</legend>
+                            {/* <div> */}
+                            <legend>Stagger 交错方式</legend>
                             <div className={style.fmflexcontainer}>
                                 {["forward", "reverse", "none"].map((type, index) => {
                                     return (
@@ -125,9 +129,10 @@ export default class ListExample extends Component {
                                     );
                                 })}
                             </div>
+                            {/* </div> */}
                         </fieldset>
                         <fieldset>
-                            <legend>Spring</legend>
+                            <legend>Spring 弹性</legend>
                             {["stiff", "noWobble", "veryGentle", "gentle", "wobbly"].map(
                                 type => {
                                     return (
@@ -169,6 +174,7 @@ export default class ListExample extends Component {
                         <div className={this.state.type === "grid" ? style.fmgrid : style.fmlist}>
                             <Flipped inverseFlipId="list">
                                 <ul className={style.listcontents}>
+                                    {/* 链式处理data */}
                                     {[...data]
                                         .filter(d => !this.state.filteredIds.includes(d.id))
                                         .sort((a, b) => {

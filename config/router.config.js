@@ -24,6 +24,10 @@ export default [
             path: '/flip/class2',
             component: './flip/class2/index.js',
           },
+          {
+            path: '/flip/class3',
+            component: './flip/class3/index.js',
+          },
 
         ]
       },

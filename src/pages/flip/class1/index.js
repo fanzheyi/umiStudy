@@ -36,6 +36,8 @@ export default class ListExample extends Component {
                 <p>git地址：<a href="https://github.com/aholachek/react-flip-toolkit">https://github.com/aholachek/react-flip-toolkit</a> </p>
                 <p>api地址：<a href="https://python.ctolib.com/aholachek-react-flip-toolkit.html">https://python.ctolib.com/aholachek-react-flip-toolkit.html</a> </p>
                 <p>原理相关：<a href="https://zhuanlan.zhihu.com/p/146641652">https://zhuanlan.zhihu.com/p/146641652</a> </p>
+                <p>完整demo：<a href="https://react-flip-toolkit.surge.sh/?sort=ascending&display=list">https://react-flip-toolkit.surge.sh/?sort=ascending&display=list</a> </p>
+
             </div>
         );
     }
